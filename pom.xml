@@ -10,7 +10,7 @@
 
     <groupId>com.github.hetianyi</groupId>
     <artifactId>springboot-parent</artifactId>
-    <version>SB-2.2.2.RELEASE-4-SNAPSHOT</version>
+    <version>SB-2.2.2.RELEASE-4</version>
 
     <packaging>pom</packaging>
     <name>Springboot Base Parent</name>
@@ -36,7 +36,7 @@
         <connection>scm:git:git@github.com:hetianyi/springboot-base.git</connection>
         <developerConnection>scm:git:git@github.com:hetianyi/springboot-base.git</developerConnection>
         <url>git@github.com:hetianyi/springboot-base.git</url>
-      <tag>springboot-parent-1.0</tag>
+      <tag>springboot-parent-SB-2.2.2.RELEASE-4</tag>
   </scm>
 
 
@@ -590,17 +590,11 @@
                 <artifactId>maven-release-plugin</artifactId>
                 <version>2.5.3</version>
                 <inherited>false</inherited>
-                <executions>
-                    <execution>
-                        <id>install</id>
-                        <phase>install</phase>
-                    </execution>
-                </executions>
                 <configuration>
                     <localCheckout>true</localCheckout>
                     <pushChanges>false</pushChanges>
                     <mavenExecutorId>forked-path</mavenExecutorId>
-                    <arguments>-Dgpg.passphrase=${gpgPassphrase}</arguments>
+                    <arguments>-DskipTests</arguments>
                 </configuration>
             </plugin>
 
