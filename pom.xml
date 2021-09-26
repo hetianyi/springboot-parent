@@ -10,7 +10,7 @@
 
     <groupId>com.github.hetianyi</groupId>
     <artifactId>springboot-parent</artifactId>
-    <version>SB-2.2.2.RELEASE-5-SNAPSHOT</version>
+    <version>SB-2.2.2.RELEASE-4-SNAPSHOT</version>
 
     <packaging>pom</packaging>
     <name>Springboot Base Parent</name>
