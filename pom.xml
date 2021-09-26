@@ -10,14 +10,13 @@
 
     <groupId>com.github.hetianyi</groupId>
     <artifactId>springboot-parent</artifactId>
-    <version>1.0</version>
+    <version>SB-2.2.2.RELEASE-5-SNAPSHOT</version>
 
     <packaging>pom</packaging>
     <name>Springboot Base Parent</name>
     <description>Parent pom based on Spring Boot 2.2.2.RELEASE</description>
 
     <licenses>
-
         <license>
             <name>The Apache Software License, Version 2.0</name>
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
@@ -386,6 +385,12 @@
             <dependency>
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-boot-starter</artifactId>
                 <version>${swagger.version}</version>
             </dependency>
 
