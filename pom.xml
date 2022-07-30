@@ -19,7 +19,7 @@
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
@@ -119,9 +119,13 @@
         <sp.junit.version>4.13.2</sp.junit.version>
         <sp.influxdb-client-java.version>6.1.0</sp.influxdb-client-java.version>
         <sp.hutool.version>5.7.4</sp.hutool.version>
-        <sp.dubbo.boot.version>2.7.5</sp.dubbo.boot.version>
-        <sp.nacos.discovery.config.version>2.2.1.RELEASE</sp.nacos.discovery.config.version>
+        <sp.dubbo.boot.version>3.0.0</sp.dubbo.boot.version>
+        <sp.grpc.version>1.48.0</sp.grpc.version>
+        <sp.nacos.discovery.config.version>2.2.8.RELEASE</sp.nacos.discovery.config.version>
 
+        <sp.protobuf-java-util.version>3.6.1</sp.protobuf-java-util.version>
+        <sp.minio.version>8.3.3</sp.minio.version>
+        <sp.camunda.version>7.17.0</sp.camunda.version>
         <!--  -->
         <!--<xxx.version></xxx.version>-->
     </properties>
@@ -443,14 +447,6 @@
                 <artifactId>hutool-all</artifactId>
                 <version>${sp.hutool.version}</version>
             </dependency>
-
-            <!-- Dubbo Spring Boot Starter -->
-            <dependency>
-                <groupId>org.apache.dubbo</groupId>
-                <artifactId>dubbo-spring-boot-starter</artifactId>
-                <version>${sp.dubbo.boot.version}</version>
-            </dependency>
-
             <!-- nacos -->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
@@ -462,6 +458,60 @@
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
                 <version>${sp.nacos.discovery.config.version}</version>
+            </dependency>
+
+            <!-- Dubbo Spring Boot Starter -->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${sp.dubbo.boot.version}</version>
+            </dependency>
+
+            <!--<dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-bom</artifactId>
+                <version>${sp.dubbo.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            &lt;!&ndash; dubbo grpc dependencies &ndash;&gt;
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-bom</artifactId>
+                <version>${sp.grpc.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>-->
+
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-registry-nacos</artifactId>
+                <version>${sp.dubbo.boot.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>log4j</artifactId>
+                        <groupId>log4j</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.protobuf</groupId>
+                <artifactId>protobuf-java-util</artifactId>
+                <version>${sp.protobuf-java-util.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.minio</groupId>
+                <artifactId>minio</artifactId>
+                <version>${sp.minio.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.camunda.bpm.springboot</groupId>
+                <artifactId>camunda-bpm-spring-boot-starter</artifactId>
+                <version>${sp.camunda.version}</version>
             </dependency>
 
             <!--
@@ -625,6 +675,7 @@
             </plugin>
 
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>2.8.2</version>
                 <inherited>false</inherited>
@@ -689,4 +740,12 @@
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
         </repository>
     </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Maven Central</name>
+            <url>https://repo1.maven.org/maven2/</url>
+        </repository>
+    </repositories>
 </project>
