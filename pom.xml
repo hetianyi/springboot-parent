@@ -5,21 +5,22 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.0</version>
+        <version>2.7.2</version>
+        <relativePath/>
     </parent>
 
     <groupId>com.github.hetianyi</groupId>
     <artifactId>springboot-parent</artifactId>
-    <version>SB-2.7.0.RELEASE-2-SNAPSHOT</version>
+    <version>SB-2.7.2.RELEASE-1-SNAPSHOT</version>
 
     <packaging>pom</packaging>
     <name>Springboot Base Parent</name>
-    <description>Parent pom based on Spring Boot 2.2.2.RELEASE</description>
+    <description>Parent pom based on Spring Boot 2.7.2.RELEASE</description>
 
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
@@ -36,7 +37,7 @@
         <connection>scm:git:git@github.com:hetianyi/springboot-parent.git</connection>
         <developerConnection>scm:git:git@github.com:hetianyi/springboot-parent.git</developerConnection>
         <url>git@github.com:hetianyi/springboot-parent.git</url>
-        <tag>springboot-parent-1.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
 
@@ -45,76 +46,87 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <myspring-cloud.version>2021.0.3</myspring-cloud.version>
-        <mymaven-compiler-plugin.version>3.7.0</mymaven-compiler-plugin.version>
+        <spring-cloud.version>2021.0.3</spring-cloud.version>
+        <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
         <skipVerify>false</skipVerify>
 
         <!-- cglib -->
-        <mycglib.version>3.3.0</mycglib.version>
+        <sp.cglib.version>3.3.0</sp.cglib.version>
         <!-- mybatis -->
-        <mymybatis.version>2.2.0</mymybatis.version>
+        <sp.mybatis.version>2.2.0</sp.mybatis.version>
         <!-- fastjson -->
-        <myfastjson.version>1.2.76</myfastjson.version>
+        <sp.fastjson.version>1.2.76</sp.fastjson.version>
         <!-- guava -->
-        <myguava.version>30.1.1-jre</myguava.version>
+        <sp.guava.version>30.1.1-jre</sp.guava.version>
         <!-- druid -->
-        <mydruid.version>1.2.6</mydruid.version>
+        <sp.druid.version>1.2.6</sp.druid.version>
         <!-- mysql-connector -->
-        <mymysql-connector.version>8.0.25</mymysql-connector.version>
+        <sp.mysql-connector.version>8.0.25</sp.mysql-connector.version>
+        <sp.postgresql.version>42.2.8</sp.postgresql.version>
         <!-- jwt -->
-        <myjwt.version>0.9.1</myjwt.version>
+        <sp.jwt.version>0.9.1</sp.jwt.version>
         <!-- lombok -->
-        <mylombok.version>1.18.20</mylombok.version>
+        <sp.lombok.version>1.18.20</sp.lombok.version>
         <!-- mybatis-plus -->
-        <mymybatis-plus.version>3.4.3.1</mymybatis-plus.version>
+        <sp.mybatis-plus.version>3.4.3.1</sp.mybatis-plus.version>
         <!-- docker-maven -->
-        <mydocker-maven.version>1.4.13</mydocker-maven.version>
+        <sp.docker-maven.version>1.4.13</sp.docker-maven.version>
         <!-- commons-beanutils -->
-        <mycommons-beanutils.version>1.9.4</mycommons-beanutils.version>
+        <sp.commons-beanutils.version>1.9.4</sp.commons-beanutils.version>
         <!-- commons-compress -->
-        <mycommons-compress.version>1.20</mycommons-compress.version>
+        <sp.commons-compress.version>1.20</sp.commons-compress.version>
         <!-- gson -->
-        <mygson.version>2.8.7</mygson.version>
+        <sp.gson.version>2.8.7</sp.gson.version>
         <!-- patchca -->
-        <mypatchca.version>0.0.1</mypatchca.version>
+        <sp.patchca.version>0.0.1</sp.patchca.version>
         <!-- swagger -->
-        <myswagger.version>3.0.0</myswagger.version>
+        <sp.swagger.version>3.0.0</sp.swagger.version>
 
         <!-- jasypt -->
-        <myjasypt-spring-boot-starter.version>3.0.3</myjasypt-spring-boot-starter.version>
+        <sp.jasypt-spring-boot-starter.version>3.0.3</sp.jasypt-spring-boot-starter.version>
 
         <!-- apache commons -->
-        <mycommons-codec.version>1.15</mycommons-codec.version>
-        <mycommons-collections4.version>4.4</mycommons-collections4.version>
-        <mycommons-email.version>1.5</mycommons-email.version>
-        <mycommons-fileupload.version>1.4</mycommons-fileupload.version>
-        <mycommons-imaging.version>1.0-alpha2</mycommons-imaging.version>
-        <mycommons-io.version>2.11.0</mycommons-io.version>
-        <mycommons-lang3.version>3.12.0</mycommons-lang3.version>
-        <mycommons-logging.version>1.2</mycommons-logging.version>
-        <mycommons-math3.version>3.6.1</mycommons-math3.version>
-        <mycommons-net.version>3.8.0</mycommons-net.version>
-        <mycommons-text.version>1.9</mycommons-text.version>
-        <mycommons-configuration2.version>2.7</mycommons-configuration2.version>
-        <mycommons-crypto.version>1.1.0</mycommons-crypto.version>
+        <sp.commons-codec.version>1.15</sp.commons-codec.version>
+        <sp.commons-collections4.version>4.4</sp.commons-collections4.version>
+        <sp.commons-email.version>1.5</sp.commons-email.version>
+        <sp.commons-fileupload.version>1.4</sp.commons-fileupload.version>
+        <sp.commons-imaging.version>1.0-alpha2</sp.commons-imaging.version>
+        <sp.commons-io.version>1.3.2</sp.commons-io.version>
+        <sp.commons-lang3.version>3.12.0</sp.commons-lang3.version>
+        <sp.commons-logging.version>1.2</sp.commons-logging.version>
+        <sp.commons-math3.version>3.6.1</sp.commons-math3.version>
+        <sp.commons-net.version>3.8.0</sp.commons-net.version>
+        <sp.commons-text.version>1.9</sp.commons-text.version>
+        <sp.commons-configuration2.version>2.7</sp.commons-configuration2.version>
+        <sp.commons-crypto.version>1.1.0</sp.commons-crypto.version>
         <!-- jackson -->
-        <myjackson-databind.version>2.12.3</myjackson-databind.version>
-        <myjackson-core.version>2.12.3</myjackson-core.version>
-        <myjackson-annotations.version>2.12.3</myjackson-annotations.version>
+        <sp.jackson-databind.version>2.12.3</sp.jackson-databind.version>
+        <sp.jackson-core.version>2.12.3</sp.jackson-core.version>
+        <sp.jackson-annotations.version>2.12.3</sp.jackson-annotations.version>
 
 
-        <mypoi.version>5.2.2</mypoi.version>
-        <myhttpclient.version>4.5.13</myhttpclient.version>
-        <mypdfbox.version>2.0.24</mypdfbox.version>
-        <myslf4j-api.version>1.7.31</myslf4j-api.version>
-        <myslf4j-log4j12.version>1.7.31</myslf4j-log4j12.version>
-        <mylog4j.version>1.2.17</mylog4j.version>
-        <mylogback-core.version>1.2.3</mylogback-core.version>
-        <myokhttp.version>2.7.5</myokhttp.version>
-        <myokhttp3.version>4.9.3</myokhttp3.version>
-        <myredisson.version>3.16.0</myredisson.version>
-        <myjunit.version>4.13.2</myjunit.version>
+        <sp.poi.version>5.0.0</sp.poi.version>
+        <sp.httpclient.version>4.5.13</sp.httpclient.version>
+        <sp.pdfbox.version>2.0.24</sp.pdfbox.version>
+        <sp.slf4j-api.version>1.7.31</sp.slf4j-api.version>
+        <sp.slf4j-log4j12.version>1.7.31</sp.slf4j-log4j12.version>
+        <sp.log4j.version>1.2.17</sp.log4j.version>
+        <sp.logback-core.version>1.2.3</sp.logback-core.version>
+        <sp.logstash-logback-encoder.version>6.6</sp.logstash-logback-encoder.version>
+        <sp.logback-classic.version>1.2.4</sp.logback-classic.version>
+        <sp.okhttp.version>2.7.5</sp.okhttp.version>
+        <sp.okhttp3.version>4.9.3</sp.okhttp3.version>
+        <sp.redisson.version>3.16.8</sp.redisson.version>
+        <sp.junit.version>4.13.2</sp.junit.version>
+        <sp.influxdb-client-java.version>6.1.0</sp.influxdb-client-java.version>
+        <sp.hutool.version>5.7.4</sp.hutool.version>
+        <sp.dubbo.boot.version>3.0.0</sp.dubbo.boot.version>
+        <sp.grpc.version>1.48.0</sp.grpc.version>
+        <sp.nacos.discovery.config.version>2021.0.1.0</sp.nacos.discovery.config.version>
 
+        <sp.protobuf-java-util.version>3.6.1</sp.protobuf-java-util.version>
+        <sp.minio.version>8.3.3</sp.minio.version>
+        <sp.camunda.version>7.17.0</sp.camunda.version>
         <!--  -->
         <!--<xxx.version></xxx.version>-->
     </properties>
@@ -126,7 +138,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>${mylombok.version}</version>
+            <version>${sp.lombok.version}</version>
             <optional>true</optional>
         </dependency>
 
@@ -134,7 +146,7 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>${myguava.version}</version>
+            <version>${sp.guava.version}</version>
             <optional>true</optional>
         </dependency>
 
@@ -148,9 +160,10 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>${myjunit.version}</version>
+            <version>${sp.junit.version}</version>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <dependencyManagement>
@@ -159,21 +172,21 @@
             <dependency>
                 <groupId>cglib</groupId>
                 <artifactId>cglib</artifactId>
-                <version>${mycglib.version}</version>
+                <version>${sp.cglib.version}</version>
             </dependency>
 
             <!-- mybatis -->
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>${mymybatis.version}</version>
+                <version>${sp.mybatis.version}</version>
             </dependency>
 
             <!-- mybatis plus  -->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
-                <version>${mymybatis-plus.version}</version>
+                <version>${sp.mybatis-plus.version}</version>
             </dependency>
 
 
@@ -181,138 +194,152 @@
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
-                <version>${myfastjson.version}</version>
+                <version>${sp.fastjson.version}</version>
             </dependency>
 
             <!-- druid-spring-boot-starter -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
-                <version>${mydruid.version}</version>
+                <version>${sp.druid.version}</version>
             </dependency>
 
             <!-- mysql -->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>${mymysql-connector.version}</version>
+                <version>${sp.mysql-connector.version}</version>
+            </dependency>
+
+            <!-- postgresql -->
+            <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>${sp.postgresql.version}</version>
             </dependency>
 
             <!-- jwt -->
             <dependency>
                 <groupId>io.jsonwebtoken</groupId>
                 <artifactId>jjwt</artifactId>
-                <version>${myjwt.version}</version>
+                <version>${sp.jwt.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
-                <version>${myslf4j-api.version}</version>
+                <version>${sp.slf4j-api.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>log4j</groupId>
                 <artifactId>log4j</artifactId>
-                <version>${mylog4j.version}</version>
+                <version>${sp.log4j.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-log4j12</artifactId>
-                <version>${myslf4j-log4j12.version}</version>
+                <version>${sp.slf4j-log4j12.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                <version>${sp.logback-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.logstash.logback</groupId>
+                <artifactId>logstash-logback-encoder</artifactId>
+                <version>${sp.logstash-logback-encoder.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>ch.qos.logback</groupId>
-                <artifactId>logback-core</artifactId>
-                <version>${mylogback-core.version}</version>
+                <artifactId>logback-classic</artifactId>
+                <version>${sp.logback-classic.version}</version>
             </dependency>
-
 
             <!-- ================= apache commons ================= -->
             <dependency>
                 <groupId>commons-beanutils</groupId>
                 <artifactId>commons-beanutils</artifactId>
-                <version>${mycommons-beanutils.version}</version>
+                <version>${sp.commons-beanutils.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-compress</artifactId>
-                <version>${mycommons-compress.version}</version>
+                <version>${sp.commons-compress.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>commons-codec</groupId>
                 <artifactId>commons-codec</artifactId>
-                <version>${mycommons-codec.version}</version>
+                <version>${sp.commons-codec.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-collections4</artifactId>
-                <version>${mycommons-collections4.version}</version>
+                <version>${sp.commons-collections4.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-email</artifactId>
-                <version>${mycommons-email.version}</version>
+                <version>${sp.commons-email.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>commons-fileupload</groupId>
                 <artifactId>commons-fileupload</artifactId>
-                <version>${mycommons-fileupload.version}</version>
+                <version>${sp.commons-fileupload.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-imaging</artifactId>
-                <version>${mycommons-imaging.version}</version>
+                <version>${sp.commons-imaging.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>commons-io</groupId>
+                <groupId>org.apache.commons</groupId>
                 <artifactId>commons-io</artifactId>
-                <version>${mycommons-io.version}</version>
+                <version>${sp.commons-io.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
-                <version>${mycommons-lang3.version}</version>
+                <version>${sp.commons-lang3.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>commons-logging</groupId>
                 <artifactId>commons-logging</artifactId>
-                <version>${mycommons-logging.version}</version>
+                <version>${sp.commons-logging.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-math3</artifactId>
-                <version>${mycommons-math3.version}</version>
+                <version>${sp.commons-math3.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>commons-net</groupId>
                 <artifactId>commons-net</artifactId>
-                <version>${mycommons-net.version}</version>
+                <version>${sp.commons-net.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-text</artifactId>
-                <version>${mycommons-text.version}</version>
+                <version>${sp.commons-text.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-configuration2</artifactId>
-                <version>${mycommons-configuration2.version}</version>
+                <version>${sp.commons-configuration2.version}</version>
             </dependency>
 
 
@@ -322,19 +349,19 @@
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
-                <version>${myjackson-databind.version}</version>
+                <version>${sp.jackson-databind.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-core</artifactId>
-                <version>${myjackson-core.version}</version>
+                <version>${sp.jackson-core.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-annotations</artifactId>
-                <version>${myjackson-annotations.version}</version>
+                <version>${sp.jackson-annotations.version}</version>
             </dependency>
             <!-- ================= jackson ================= -->
 
@@ -342,19 +369,19 @@
             <dependency>
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi</artifactId>
-                <version>${mypoi.version}</version>
+                <version>${sp.poi.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
                 <artifactId>httpclient</artifactId>
-                <version>${myhttpclient.version}</version>
+                <version>${sp.httpclient.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.apache.pdfbox</groupId>
                 <artifactId>pdfbox</artifactId>
-                <version>${mypdfbox.version}</version>
+                <version>${sp.pdfbox.version}</version>
             </dependency>
             <!-- ================= apache ================= -->
 
@@ -363,71 +390,231 @@
             <dependency>
                 <groupId>com.github.bingoohuang</groupId>
                 <artifactId>patchca</artifactId>
-                <version>${mypatchca.version}</version>
+                <version>${sp.patchca.version}</version>
             </dependency>
 
             <!-- gson -->
             <dependency>
                 <groupId>com.google.code.gson</groupId>
                 <artifactId>gson</artifactId>
-                <version>${mygson.version}</version>
+                <version>${sp.gson.version}</version>
             </dependency>
 
             <!-- swagger -->
             <dependency>
                 <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger2</artifactId>
-                <version>${myswagger.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger-ui</artifactId>
-                <version>${myswagger.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>io.springfox</groupId>
                 <artifactId>springfox-boot-starter</artifactId>
-                <version>${myswagger.version}</version>
+                <version>${sp.swagger.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.github.ulisesbocchio</groupId>
                 <artifactId>jasypt-spring-boot-starter</artifactId>
-                <version>${myjasypt-spring-boot-starter.version}</version>
+                <version>${sp.jasypt-spring-boot-starter.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-crypto</artifactId>
-                <version>${mycommons-crypto.version}</version>
+                <version>${sp.commons-crypto.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.redisson</groupId>
                 <artifactId>redisson</artifactId>
-                <version>${myredisson.version}</version>
+                <version>${sp.redisson.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.squareup.okhttp</groupId>
                 <artifactId>okhttp</artifactId>
-                <version>${myokhttp.version}</version>
+                <version>${sp.okhttp.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.squareup.okhttp3</groupId>
                 <artifactId>okhttp</artifactId>
-                <version>${myokhttp3.version}</version>
+                <version>${sp.okhttp3.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.influxdb</groupId>
+                <artifactId>influxdb-client-java</artifactId>
+                <version>${sp.influxdb-client-java.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${sp.hutool.version}</version>
+            </dependency>
+            <!-- nacos -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+                <version>${sp.nacos.discovery.config.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+                <version>${sp.nacos.discovery.config.version}</version>
+            </dependency>
+
+            <!-- Dubbo Spring Boot Starter -->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${sp.dubbo.boot.version}</version>
+            </dependency>
+
+            <!--<dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-bom</artifactId>
+                <version>${sp.dubbo.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            &lt;!&ndash; dubbo grpc dependencies &ndash;&gt;
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-bom</artifactId>
+                <version>${sp.grpc.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>-->
+
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-registry-nacos</artifactId>
+                <version>${sp.dubbo.boot.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>log4j</artifactId>
+                        <groupId>log4j</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.protobuf</groupId>
+                <artifactId>protobuf-java-util</artifactId>
+                <version>${sp.protobuf-java-util.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.minio</groupId>
+                <artifactId>minio</artifactId>
+                <version>${sp.minio.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.camunda.bpm.springboot</groupId>
+                <artifactId>camunda-bpm-spring-boot-starter</artifactId>
+                <version>${sp.camunda.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.camunda.bpm.springboot</groupId>
+                <artifactId>camunda-bpm-spring-boot-starter-rest</artifactId>
+                <version>${sp.camunda.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.camunda.bpm.springboot</groupId>
+                <artifactId>camunda-bpm-spring-boot-starter-webapp</artifactId>
+                <version>${sp.camunda.version}</version>
+            </dependency>
+
+            <!--
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-devtools</artifactId>
+                <scope>runtime</scope>
+                <optional>true</optional>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-actuator</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-jpa</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.retry</groupId>
+                <artifactId>spring-retry</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-security</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-config-server</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-config</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.kafka</groupId>
+                <artifactId>spring-kafka</artifactId>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <scope>test</scope>
             </dependency>
 
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${myspring-cloud.version}</version>
+                <artifactId>spring-cloud-starter</artifactId>
             </dependency>
 
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-validation</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            </dependency>
+            -->
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -435,8 +622,9 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>${mymaven-compiler-plugin.version}</version>
+                <version>${maven-compiler-plugin.version}</version>
                 <inherited>false</inherited>
                 <configuration>
                     <source>1.8</source>
@@ -501,6 +689,7 @@
             </plugin>
 
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>2.8.2</version>
                 <inherited>false</inherited>
@@ -553,7 +742,6 @@
         </pluginManagement>
     </build>
 
-
     <distributionManagement>
         <snapshotRepository>
             <id>oss</id>
@@ -566,4 +754,12 @@
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
         </repository>
     </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Maven Central</name>
+            <url>https://repo1.maven.org/maven2/</url>
+        </repository>
+    </repositories>
 </project>
