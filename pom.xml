@@ -6,11 +6,12 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.2.2.RELEASE</version>
+        <relativePath />
     </parent>
 
     <groupId>com.github.hetianyi</groupId>
     <artifactId>springboot-parent</artifactId>
-    <version>SB-2.2.2.RELEASE-9-SNAPSHOT</version>
+    <version>2.2.2.9-SNAPSHOT</version>
 
     <packaging>pom</packaging>
     <name>Springboot Base Parent</name>
@@ -36,7 +37,7 @@
         <connection>scm:git:git@github.com:hetianyi/springboot-parent.git</connection>
         <developerConnection>scm:git:git@github.com:hetianyi/springboot-parent.git</developerConnection>
         <url>git@github.com:hetianyi/springboot-parent.git</url>
-        <tag>springboot-parent-1.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
 
@@ -126,6 +127,10 @@
         <sp.protobuf-java-util.version>3.6.1</sp.protobuf-java-util.version>
         <sp.minio.version>8.3.3</sp.minio.version>
         <sp.camunda.version>7.17.0</sp.camunda.version>
+        <sp.kaptcha.version>2.3.2</sp.kaptcha.version>
+        <sp.googleauth.version>1.4.0</sp.googleauth.version>
+        <sp.zxing.qrcode.version>3.3.3</sp.zxing.qrcode.version>
+        <sp.javax.mail.version>1.6.2</sp.javax.mail.version>
         <!--  -->
         <!--<xxx.version></xxx.version>-->
     </properties>
@@ -467,6 +472,31 @@
                 <version>${sp.dubbo.boot.version}</version>
             </dependency>
 
+            <!-- authenticator -->
+            <dependency>
+                <groupId>com.github.penggle</groupId>
+                <artifactId>kaptcha</artifactId>
+                <version>${sp.kaptcha.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.warrenstrange</groupId>
+                <artifactId>googleauth</artifactId>
+                <version>${sp.googleauth.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.zxing</groupId>
+                <artifactId>core</artifactId>
+                <version>${sp.zxing.qrcode.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sun.mail</groupId>
+                <artifactId>javax.mail</artifactId>
+                <version>${sp.javax.mail.version}</version>
+            </dependency>
+
             <!--<dependency>
                 <groupId>org.apache.dubbo</groupId>
                 <artifactId>dubbo-bom</artifactId>
@@ -621,6 +651,7 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven-compiler-plugin.version}</version>
                 <inherited>false</inherited>
